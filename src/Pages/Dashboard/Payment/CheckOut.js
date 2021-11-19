@@ -18,7 +18,7 @@ const CheckOut = ({ appointment }) => {
     
     useEffect(() => {
 
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://sleepy-springs-29140.herokuapp.com/create-payment-intent", {
 
             method: "POST",
             headers: {
@@ -95,7 +95,7 @@ const CheckOut = ({ appointment }) => {
                 // last4:paymentIntent.card.last4
             }
 
-            fetch(`http://localhost:5000/appointments/${_id}`,{
+            fetch(`https://sleepy-springs-29140.herokuapp.com/appointments/${_id}`,{
                 method:"PUT",
                 headers:{
                     'content-type':'application/json'

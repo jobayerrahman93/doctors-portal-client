@@ -19,7 +19,7 @@ const Appointments = ({date}) => {
 
     useEffect(() => {
 
-        const url = `http://localhost:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`;
+        const url = `https://sleepy-springs-29140.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`;
         fetch(url,{
             headers:{
                 'authorization':`Bearer ${token}`

@@ -18,7 +18,7 @@ const Payment = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payment/${appointmentId}`)
+        fetch(`https://sleepy-springs-29140.herokuapp.com/payment/${appointmentId}`)
             .then(res => res.json())
             .then(data => setAppointment(data))
     }, []);

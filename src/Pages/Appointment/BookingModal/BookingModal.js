@@ -61,7 +61,7 @@ const BookingModal = ({ handleOpen, handleClose, open, booking, date, setAppoint
 
         // Send to the server
 
-        fetch("http://localhost:5000/appointments", {
+        fetch("https://sleepy-springs-29140.herokuapp.com/appointments", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
