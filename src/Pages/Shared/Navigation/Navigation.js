@@ -62,15 +62,11 @@ const Navigation = () => {
 
           {user?.email ? (
                   <ListItem>
-                    <ListItemText button>
-                    <Link
-                    onClick={logOut}
-                    sx={{ color: "white" }}
-                    color="inherit"
-                    className={drawerNav}
-                  >
+                    <ListItemText  onClick={logOut}
+                    className={drawerNav} button>
+                
                     LogOut
-                  </Link>
+              
                   </ListItemText>
                   </ListItem>
                 ) : (
@@ -137,7 +133,7 @@ const Navigation = () => {
                     LogOut
                   </Button>
                 ) : (
-                  <Link to="/login">
+                  <Link style={{textDecoration:"none"}} to="/login">
                     <Button sx={{ color: "white" }} color="inherit">
                       Login
                     </Button>
