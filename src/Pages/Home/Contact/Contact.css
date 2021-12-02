@@ -1,0 +1,13 @@
+.contact {
+  background: url("../../../../src/images/appointment-bg.png");
+  object-fit: cover;
+  height: 100vh;
+  background-color: rgba(55, 53, 62, 0.9);
+  background-blend-mode: darken, luminosity;
+  z-index: 1;
+  overflow: hidden;
+}
+.con {
+  z-index: 999;
+  color: white;
+}

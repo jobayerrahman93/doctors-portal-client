@@ -1,4 +1,4 @@
-import { Alert } from '@mui/material';
+import { Alert, Container } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
@@ -57,6 +57,7 @@ const CheckOut = ({ appointment }) => {
 
         if (error) {
             setError(error.message);
+            setProcessing(false)
         } else {
             console.log('[PaymentMethod]', paymentMethod);
         }
@@ -121,7 +122,8 @@ const CheckOut = ({ appointment }) => {
             {
               success &&  <Alert sx={{ width: "20%", textAlign: "center", margin: "0 auto", my: 3 }} severity="success">{success}</Alert>
             }
-            <form onSubmit={handleSubmit}>
+            <Container>
+            <form style={{marginTop:"100px"}} onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
@@ -138,10 +140,11 @@ const CheckOut = ({ appointment }) => {
                         },
                     }}
                 />
-                {processing ?<CircularProgress></CircularProgress>: <button type="submit" disabled={!stripe || success}>
+                {processing ?<CircularProgress></CircularProgress>: <button type="submit" sx={{p:4}} disabled={!stripe || success}>
                     Pay ${price}
                 </button>}
             </form>
+            </Container>
         </div>
     );
 };

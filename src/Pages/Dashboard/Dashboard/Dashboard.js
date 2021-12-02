@@ -1,5 +1,4 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { Button } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,9 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
@@ -36,53 +32,27 @@ function Dashboard(props) {
         setMobileOpen(!mobileOpen);
     };
 
+
+    const style={
+        textDecoration:"none"
+    }
+
     const drawer = (
-        <div>
+        <div >
             <Toolbar />
             <Divider />
 
-            <Link to="/"><Button color="inherit">Home</Button></Link>
+            <Link  style={style} to="/"><Button color="inherit" sx={{mt:8}}>Home</Button></Link>
             <br />
-            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
+            <Link style={style} to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
             {admin && <Box>
-                <Link to={`${url}/makeAdmin`}><Button color="inherit">Make an admin</Button></Link>
-                <Link to={`${url}/addDoctor`}><Button color="inherit">Add Doctor</Button></Link>
+                <Link style={style} to={`${url}/makeAdmin`}><Button color="inherit">Make an admin</Button></Link>
+                <Link style={style} to={`${url}/addDoctor`}><Button color="inherit">Add Doctor</Button></Link>
 
             </Box>}
 
-            <List>
-
-                <ListItem button>
-                    <ListItemIcon>
-                        <InboxIcon />
-                        <Typography sx={{ml:5}} variant="subtitle1">
-                            Inbox
-                        </Typography>
-                    </ListItemIcon>
-
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                    <InboxIcon />
-                       
-                    </ListItemIcon>
-
-                </ListItem>
-
-            </List>
-            {/* <List>
-                {['Inbox', 'Starred', 'Send email', 'Save'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                           <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemIcon>
-                        <MailIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List> */}
+        
+           
 
 
         </div>

@@ -2,9 +2,11 @@ import { Button, Container, Paper, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import bannerBg from "../../../images/bg.png";
 import chair from "../../../images/chair.png";
-
 const Banner = () => {
 
     const bannerBack = {
@@ -28,7 +30,10 @@ const Banner = () => {
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt omnis iusto non eveniet laudantium autem, neque nostrum maxime error! Voluptate animi quas deserunt omnis!
                                 </Typography>
 
+                                <Link style={{textDecoration:"none"}} to="/appointment">
                                 <Button sx={{ my: 3 }} variant="contained">Get Appointment</Button>
+                                </Link>
+                                
                             </Box>
 
                         </Grid>

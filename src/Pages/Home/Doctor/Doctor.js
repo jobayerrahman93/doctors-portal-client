@@ -1,5 +1,6 @@
 import { Grid, Typography } from '@mui/material';
-import React from 'react';
+import Box from '@mui/material/Box';
+import * as React from 'react';
 
 const Doctor = ({ doctor }) => {
 
@@ -7,11 +8,15 @@ const Doctor = ({ doctor }) => {
 
     return (
         <>
-            <Grid sx={{ boxShadow: 3}}   item xs={12} sm={6} md={4}>
-                <img style={{ width: "300px", height:"200px" }} src={`data:image/png;base64,${image}`}></img>
-                <Typography style={{mt:"500px"}} variant="h5">
-                    Doctor Name: <span style={{color:'blue'}}>{name}</span>
+            <Grid    item xs={12} sm={6} md={4}>
+               <Box  sx={{ boxShadow: 3,height:"300px"}} >
+               <img style={{ width: "100px", height:"100px",border:"7px solid #2c3e50",borderRadius:"50%",marginTop:"40px" }} src={`data:image/png;base64,${image}`}>
+
+               </img>
+                <Typography style={{margin:"20px"}} variant="h5">
+                    Doctor : <span style={{color:'blue'}}>{name}</span>
                 </Typography>
+               </Box>
             </Grid>
         </>
     );

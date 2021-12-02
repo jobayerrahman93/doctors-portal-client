@@ -11,7 +11,7 @@ const ExceptionalDental = () => {
             <Container>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                   <img style={{height:"500px"}} src={treatment} alt="" />
+                   <img style={{height:"448px",marginTop:"50px"}} src={treatment} alt="" />
                 </Grid>
                 <Grid sx={{textAlign:"left",mt:5}} item xs={12} md={6}>
                    <Typography variant="h3">
