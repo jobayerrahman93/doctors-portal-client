@@ -40,7 +40,7 @@ const BookingModal = ({ handleOpen, handleClose, open, booking, date, setAppoint
         const newInfo = { ...bookingInfo };
 
         newInfo[field] = value;
-        console.log(newInfo);
+        // console.log(newInfo);
 
         setBookingInfo(newInfo);
 
@@ -119,6 +119,7 @@ const BookingModal = ({ handleOpen, handleClose, open, booking, date, setAppoint
                                 id="outlined-size-small"
                                 defaultValue={user.displayName}
                                 size="small"
+                                placeholder="Patient Name"
                                 name="patientName"
                                 onBlur={handleBlur}
                             />
